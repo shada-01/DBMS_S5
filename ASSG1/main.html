@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>form</title>
+</head>
+<body>
+    <h1 class="res">RESUME</h1>
+    
+    <form action="http://localhost/name.php" class="default" method="POST">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input name="name" type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            
+          </div>
+          <div class="form-group">
+            <label for="rollno">Roll Number</label>
+            <input name="rollno" type="text" class="form-control" id="rollno" placeholder="Enter your roll no.">
+          </div>
+          <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input  type="date" class="form-control" data-date-format="mm/dd/yyyy" name="dob" id="dob">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input name="phone" type="tel" class="form-control" id="phone" >
+          </div>
+          <div class="form-group">
+              <label for="address">Address</label> 
+              
+              <textarea class="form-control" id="add" rows="3" name="add"></textarea>
+              
+          </div>
+          <br>
+          <h4>Grade Details</h4>
+    
+          <div class="row">
+            <div class="col">
+                <!--<label for="sgpa1">SGPA 1</label>-->
+              <input type="text" class="form-control" placeholder="SGPA 1" name="sgpa1" id="sgpa1">
+            </div>
+            <div class="col">
+                <!--<label for="sgpa2">SGPA 2</label>-->
+              <input type="text" class="form-control" placeholder="SGPA 2" name="sgpa2" id="sgpa2">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+                <!--<label for="sgpa3">SGPA 3</label>-->
+              <input type="text" class="form-control" placeholder="SGPA 3" name="sgpa3" id="sgpa3">
+            </div>
+            <div class="col">
+               <!----<label for="sgpa4">SGPA 4</label>-->
+              <input type="text" class="form-control" placeholder="SGPA 4" name="sgpa4" id="sgpa4">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+                <!--<label for="sgpa5">SGPA 5</label>-->
+              <input type="text" class="form-control" placeholder="SGPA 5" name="sgpa5" id="sgpa5">
+            </div>
+            <div class="col">
+                <!--<label for="sgpa2">SGPA 6</label>-->
+              <input type="text" class="form-control" placeholder="SGPA 6" name="sgpa6" id="sgpa6">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col">
+                <!--<label for="sgpa1">SGPA 7</label>-->
+              <input type="text" class="form-control" placeholder="SGPA 7" name="sgpa7" id="sgpa7">
+            </div>
+            <div class="col">
+               <!---- <label for="sgpa8">SGPA 2</label>-->
+              <input type="text" class="form-control" placeholder="SGPA 8" name="sgpa8" id="sgpa8">
+            </div>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input  type="radio" class="form-check-input"  name="day" id="day" value="day scholar">
+            <label class="form-check-label" for="day">Day Scholar</label>s
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input"  name="host" id="host" value="hosteller">
+            <label class="form-check-label" for="host">Hosteller</label>
+          </div>
+          <br>
+          <br>
+          <div class="form-group">
+            <label for="hobby">Hobbies</label> 
+            
+            <textarea class="form-control" id="hobby" rows="3" name="hobby"></textarea>
+            
+        </div>
+
+        <input type="radio" id="hi" name="hi" value="HI">
+        <label for="hi">HI</label>
+        <div class="form-group">
+            <label for="ref">References</label> 
+            
+            <textarea class="form-control" id="ref" rows="2" name="ref"></textarea>
+            
+        </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+</body>
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
+</html>
